@@ -1,0 +1,151 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000000826cd06, pid=36, tid=0x0000000000000025
+#
+# JRE version:  (8.0_152-b11) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.152-b11 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x26cd06]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000004f0000):  JavaThread "Unknown thread" [_thread_in_vm, id=37, stack(0x0000000000140000,0x0000000000240000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000006, RBX=0x0000000002100800, RCX=0x00000000cafebabe, RDX=0x0000000000000000
+RSP=0x000000000023f380, RBP=0x00000000087c1130, RSI=0x0000000000000000, RDI=0x0000000000000001
+R8 =0x000000000884047b, R9 =0x000000000023f520, R10=0x0000000000000002, R11=0x000000000023f690
+R12=0x00000000000003d8, R13=0x0000000000000000, R14=0x00007fffff7e8000, R15=0x00007ffe171d70b0
+RIP=0x000000000826cd06, EFLAGS=0x0000000000210246
+
+Top of Stack: (sp=0x000000000023f380)
+0x000000000023f380:   00000080ffffffff 00000000085a7e38
+0x000000000023f390:   000000000023f6e0 000000000827a155
+0x000000000023f3a0:   00000000004f0ae0 00000000082ff0a6
+0x000000000023f3b0:   0000000008840260 0000000000000063
+0x000000000023f3c0:   00000080ffffffff 000000000000000c
+0x000000000023f3d0:   000000000023f438 0000000000000000
+0x000000000023f3e0:   0000000000000006 ffffffffffffffff
+0x000000000023f3f0:   0000000cffffffff 00000000085a7e38
+0x000000000023f400:   0000000000000000 00000000081eb5ab
+0x000000000023f410:   0000000008840170 0000000000000001
+0x000000000023f420:   0000000000000006 ffffffffffffffff
+0x000000000023f430:   000000000023f510 00000000082119be
+0x000000000023f440:   0000000008840260 0000000000000063
+0x000000000023f450:   0000000000000063 000000000023f570
+0x000000000023f460:   0000000000000063 00000000082fee3d
+0x000000000023f470:   0000000000000063 0000000008840260 
+
+Instructions: (pc=0x000000000826cd06)
+0x000000000826cce6:   24 48 48 8b 6c 24 50 48 8b 74 24 58 48 83 c4 30
+0x000000000826ccf6:   5f c3 cc cc cc cc cc cc cc cc 48 83 ec 28 ff d1
+0x000000000826cd06:   eb 00 48 83 c4 28 c3 cc cc cc 40 53 48 83 ec 20
+0x000000000826cd16:   b9 13 00 00 00 e8 70 c7 f7 ff 48 8b 15 61 39 55 
+
+
+Stack: [0x0000000000140000,0x0000000000240000],  sp=0x000000000023f380,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x26cd06]
+V  [jvm.dll+0x2ff0a6]
+V  [jvm.dll+0x3006c3]
+V  [jvm.dll+0x1eb7d8]
+V  [jvm.dll+0x21d2ea]
+V  [jvm.dll+0x122b51]
+C  [webstorm64.exe+0x452d]
+C  [webstorm64.exe+0x59e4]
+C  [webstorm64.exe+0xed5c]
+C  [KERNEL32.dll+0x4ec01]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000004f0000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=37, stack(0x0000000000140000,0x0000000000240000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x0000000140000000 - 0x000000014014c000 	C:\Program Files\JetBrains\WebStorm 2017.2.3\bin\webstorm64.exe
+0x00007f57d4b00000 - 0x00007f57d4dd8000 	C:\windows\system32\ntdll.dll
+0x000000007b820000 - 0x000000007bc6f000 	C:\windows\system32\KERNEL32.dll
+0x00007f57d3330000 - 0x00007f57d36ad000 	C:\windows\system32\user32.dll
+0x00007f57d2fd0000 - 0x00007f57d330f000 	C:\windows\system32\gdi32.dll
+0x00007f57d2d40000 - 0x00007f57d2fb0000 	C:\windows\system32\advapi32.dll
+0x00007f57d2b20000 - 0x00007f57d2d2d000 	C:\windows\system32\version.dll
+0x00007f57d26d0000 - 0x00007f57d2b14000 	C:\windows\system32\shell32.dll
+0x00007f57d2440000 - 0x00007f57d26b8000 	C:\windows\system32\shlwapi.dll
+0x00007f57d2130000 - 0x00007f57d242b000 	C:\windows\system32\comctl32.dll
+0x00007f57d1290000 - 0x00007f57d1514000 	C:\windows\system32\winex11.drv
+0x00007f57cf480000 - 0x00007f57cf6ac000 	C:\windows\system32\uxtheme.dll
+0x00007f57cf120000 - 0x00007f57cf473000 	C:\windows\system32\ole32.dll
+0x00007f57cee80000 - 0x00007f57cf0fa000 	C:\windows\system32\rpcrt4.dll
+0x0000000008000000 - 0x000000000883e000 	C:\Program Files\JetBrains\WebStorm 2017.2.3\jre64\bin\server\jvm.dll
+0x00007f57cec50000 - 0x00007f57cee69000 	C:\windows\system32\wsock32.dll
+0x00007f57cea20000 - 0x00007f57cec4c000 	C:\windows\system32\ws2_32.dll
+0x00007f57ce7f0000 - 0x00007f57cea10000 	C:\windows\system32\iphlpapi.dll
+0x00007f57ce530000 - 0x00007f57ce7e8000 	C:\windows\system32\winmm.dll
+0x00007f57ce300000 - 0x00007f57ce527000 	C:\windows\system32\msacm32.dll
+0x00007f57ce0f0000 - 0x00007f57ce2fb000 	C:\windows\system32\psapi.dll
+0x0000000079730000 - 0x0000000079802000 	C:\Program Files\JetBrains\WebStorm 2017.2.3\jre64\bin\MSVCR100.dll
+0x0000000180000000 - 0x000000018000f000 	C:\Program Files\JetBrains\WebStorm 2017.2.3\jre64\bin\verify.dll
+0x0000000000600000 - 0x0000000000629000 	C:\Program Files\JetBrains\WebStorm 2017.2.3\jre64\bin\java.dll
+0x0000000000630000 - 0x0000000000646000 	C:\Program Files\JetBrains\WebStorm 2017.2.3\jre64\bin\zip.dll
+0x00007f57cde90000 - 0x00007f57ce0e8000 	C:\windows\system32\dbghelp.dll
+0x00007f57cdbe0000 - 0x00007f57cde7c000 	C:\windows\system32\msvcrt.dll
+
+VM Arguments:
+jvm_args: -Xms128m -Xmx750m -XX:ReservedCodeCacheSize=240m -XX:+UseConcMarkSweepGC -XX:SoftRefLRUPolicyMSPerMB=50 -ea -Dsun.io.useCanonCaches=false -Djava.net.preferIPv4Stack=true -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -Djb.vmOptionsFile=C:\Program Files\JetBrains\WebStorm 2017.2.3\bin\webstorm64.exe.vmoptions -Xbootclasspath/a:C:\Program Files\JetBrains\WebStorm 2017.2.3\lib\boot.jar -Didea.platform.prefix=WebStorm -Didea.paths.selector=WebStorm2017.2 -XX:ErrorFile=C:\users\jaya-myqsoft\java_error_in_webstorm_%p.log -XX:HeapDumpPath=C:\users\jaya-myqsoft\java_error_in_webstorm.hprof 
+java_command: <unknown>
+java_class_path (initial): C:\Program Files\JetBrains\WebStorm 2017.2.3\lib\bootstrap.jar;C:\Program Files\JetBrains\WebStorm 2017.2.3\lib\extensions.jar;C:\Program Files\JetBrains\WebStorm 2017.2.3\lib\util.jar;C:\Program Files\JetBrains\WebStorm 2017.2.3\lib\jdom.jar;C:\Program Files\JetBrains\WebStorm 2017.2.3\lib\log4j.jar;C:\Program Files\JetBrains\WebStorm 2017.2.3\lib\trove4j.jar;C:\Program Files\JetBrains\WebStorm 2017.2.3\lib\jna.jar
+Launcher Type: generic
+
+Environment Variables:
+PATH=C:\windows\system32;C:\windows;C:\windows\system32\wbem
+USERNAME=jaya-myqsoft
+SHELL=/bin/bash
+DISPLAY=:0.0
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 5.1 , 64 bit Build 2600 (5.1.2600.2180)
+
+CPU:total 4 (initial active 4) 
+
+Memory: 4k page, physical 8081552k(4509616k free), swap 16373900k(12801832k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.152-b11) for windows-amd64 JRE (1.8.0_152-release-915-b11), built on Aug 18 2017 13:03:44 by "builduser" with MS VC++ 10.0 (VS2010)
+
+time: Wed Jan 31 17:36:51 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

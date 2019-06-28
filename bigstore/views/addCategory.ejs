@@ -1,0 +1,58 @@
+<% include templete/header %>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+        Add Category         
+      </h1>
+        </section>
+        <!-- Main content -->
+        <section class="content">
+            <!-- Info boxes -->
+            <!-- /.row -->
+            <!-- Main row -->
+            <div class="row">
+                <!-- Left col -->
+                <div class="col-md-12">
+                    <!-- TABLE: LATEST ORDERS -->
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Add Category</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <form action="/admin/add_category" method="post">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Category Name</label>
+                                    <select class="form-control" name="main_category">
+                                      <option value="">Please select</option>
+                                       <% for(var i=0; i<data.length; i++){ %> 
+                                       <option value="<%= data[i]._id; %>"><%= data[i].name; %></option>   
+                                        <%  } %>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Name</label>
+                                    <input name="categoryName" id="exampleInputEmail1" class="form-control" type="text" required>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                        <!-- /.box-footer -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.col -->
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <% include templete/footer %>

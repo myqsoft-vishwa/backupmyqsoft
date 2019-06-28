@@ -1,0 +1,71 @@
+<% include ../templete/user_header %>
+    <style>
+     ::placeholder {
+        color: #c1c1c1;
+        opacity: 1;
+        /* Firefox */
+    }
+
+     :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #c1c1c1;
+    }
+
+     ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #c1c1c1;
+    }
+
+    input[type="email"] {
+        width: 89%;
+        padding: 10px 10px;
+        font-size: 1em;
+        border: none;
+        border-bottom-width: medium;
+        border-bottom-style: none;
+        border-bottom-color: currentcolor;
+        border-bottom: none;
+        outline: none;
+        color: #999;
+        float: left;
+        background: none;
+    }
+    </style>
+    <!--banner-->
+    <div class="banner-top">
+        <div class="container">
+            <h3>Login</h3>
+            <h4><a href="index.html">Home</a><label>/</label>Login</h4>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!--login-->
+    <div class="login">
+        <div class="main-agileits">
+            <div class="form-w3agile">
+                <h3>Login</h3>
+                 <% if(locals.error_messages){ %>
+                    <h4 class="msg" style="color: red;margin-left: 30%;"><%=error_messages%></h4>
+                    <% } %>
+                <form action="submit_login" method="post">
+                    <div class="key">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <input type="email" value="" placeholder="Please enter email" id="email" name="Email" required>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="key">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input type="password" value="" placeholder="Please enter password" id="password" name="Password" required>
+                        <div class="clearfix"></div>
+                    </div>
+                    <input type="submit" value="Login" id="submit_login">
+                </form>
+            </div>
+            <div class="forg">
+                <a href="#" class="forg-left">Forgot Password</a>
+                <a href="register.html" class="forg-right">Register</a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <% include ../templete/user_footer %>

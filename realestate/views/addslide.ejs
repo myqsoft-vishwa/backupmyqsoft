@@ -1,0 +1,66 @@
+
+<% include adminheader %>
+ 
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+   
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Info boxes -->
+     
+      <!-- /.row -->
+
+      
+
+      <!-- Main row -->
+      <div class="row">
+        <!-- Left col -->
+        <div class="col-md-12">
+      
+
+          <!-- TABLE: LATEST ORDERS -->
+          <div class="box box-info">
+            
+            <div class="box-header with-border">
+              <h3 class="box-title">Edit Profile</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form action="/admin/uploadslideimage" method="post" enctype="multipart/form-data" >
+			<input type="hidden" name="id" value="" />
+              <div class="box-body">
+			   <div class="form-group">
+                  <label for="exampleInputEmail1">Image Upload</label>
+                  <input  name="pic" id="exampleInputEmail1"  type="file">
+                </div>
+               
+                
+               
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+         
+           
+            <!-- /.box-footer -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+
+        
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  
+<% include adminfooter %>

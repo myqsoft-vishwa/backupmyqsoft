@@ -1,0 +1,55 @@
+<% include ../templete/user_header %>
+    <style>
+     ::placeholder {
+        color: #c1c1c1;
+        opacity: 1;
+        /* Firefox */
+    }
+
+     :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #c1c1c1;
+    }
+
+     ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #c1c1c1;
+    }
+    </style>
+    <!--banner-->
+    <div class="banner-top">
+        <div class="container">
+            <h3>Register</h3>
+            <h4><a href="/">Home</a><label>/</label>Register</h4>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="login">
+        <div class="main-agileits">
+            <div class="form-w3agile form1">
+                <h3>Register</h3>
+                <% if(locals.success_messages){ %>
+                    <h4 class="msg" style="color: green;margin-left: 30%;"><%=success_messages%></h4>
+                    <% } %>
+                        <form action="/submit_register" name="submit" id="formsubmit" method="post">
+                            <div class="key">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <input placeholder="Username" type="text" value="" name="Username" id="username" required>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="key">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <input type="text" placeholder="Email" value="" name="Email" id="email" required>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="key">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                                <input type="password" placeholder="*****" value="" name="Password" id="password" required>
+                                <div class="clearfix"></div>
+                            </div>
+                            <input type="submit" id="submit_button" value="Submit">
+                        </form>
+            </div>
+        </div>
+    </div>
+    <% include ../templete/user_footer %>

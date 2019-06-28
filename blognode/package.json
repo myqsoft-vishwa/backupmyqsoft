@@ -1,0 +1,28 @@
+{
+  "name": "blognode",
+  "version": "1.0.0",
+  "description": "blognode",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "date-and-time": "^0.6.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.2",
+    "express-mailer": "^0.3.1",
+    "express-validator": "^5.0.3",
+    "md5": "^2.2.1",
+    "mongoose": "^5.0.9",
+    "nodemailer": "^4.6.3",
+    "promise": "^8.0.1",
+    "sendmail": "^1.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.1"
+  }
+}
